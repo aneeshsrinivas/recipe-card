@@ -2,6 +2,9 @@
 
 A visually stunning, feature-rich chocolate cake recipe card with interactive elements that make cooking fun and engaging. Perfect for beginner web developers looking to showcase creative UI/UX implementations.
 
+**🔗 Check it out here:** [Live Demo](https://aneeshsrinivas.github.io/recipe-card/)  
+We’d love to hear your thoughts — please share your valuable feedback after trying it out!
+
 ---
 
 ## 🚀 Features
@@ -72,7 +75,7 @@ A visually stunning, feature-rich chocolate cake recipe card with interactive el
 1. **Clone the repo**
    ```bash
    git clone https://github.com/your-username/recipe-card.git
-
+   
 2. Open index.html in any modern browser.
 
 3. No dependencies required – works out of the box!
@@ -89,4 +92,4 @@ Flaticon for UI icons.
 
 Google for the Web Speech API.
 
-Pro Tip: The QR code links to a special baking tutorial - scan it from your printed recipe!
+💡 Pro Tip: The QR code links to a special baking tutorial – scan it from your printed recipe!
