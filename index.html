@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Chocolate Cake Recipe</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Interactive chocolate cake recipe with step-by-step guidance and customization">
+</head>
+<body>
+    <div class="recipe-card">
+        <!-- XP Progress Bar -->
+        <div class="xp-container">
+            <div class="xp-bar" id="xp-bar"></div>
+            <div class="xp-text">Level <span id="chef-level">1</span> Chef (<span id="xp-value">0</span>/100 XP)</div>
+        </div>
+
+        <!-- Recipe Header -->
+        <div class="recipe-header">
+            <h1>Ultimate Chocolate Cake</h1>
+            <div class="recipe-image">
+                <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                     alt="Chocolate Cake with frosting" 
+                     loading="lazy">
+            </div>
+            <div class="yield-info">
+                <p>Yield: 8 servings (2-layer 9-inch cake) • 12-16 slices</p>
+                <p class="temp-tip">Tip: Ensure ingredients (eggs, buttermilk, butter) are at room temperature</p>
+            </div>
+        </div>
+
+        <!-- Allergen Info -->
+        <div class="allergen-info">
+            <span>Contains: Gluten, Dairy, Eggs</span>
+        </div>
+
+        <!-- Recipe Info -->
+        <div class="recipe-info">
+            <div class="info-item">
+                <span class="info-label">Prep Time:</span>
+                <span class="info-value">30 mins</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Cook Time:</span>
+                <span class="info-value">40 mins</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Servings:</span>
+                <select id="servings" class="serving-selector">
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8" selected>8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Recipe Controls -->
+        <div class="recipe-controls">
+            <button id="voice-control-btn" class="control-btn" aria-label="Toggle voice control">
+                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="" width="16"> Voice
+            </button>
+            <button id="timer-btn" class="control-btn" aria-label="Set cooking timer">
+                <img src="https://cdn-icons-png.flaticon.com/512/3161/3161837.png" alt="" width="16"> Timer
+            </button>
+            <button id="unit-toggle" class="control-btn" aria-label="Toggle measurement units">
+                <img src="https://cdn-icons-png.flaticon.com/512/4516/4516435.png" alt="" width="16"> Metric
+            </button>
+            <button id="print-btn" class="control-btn" aria-label="Print recipe">
+                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="" width="16"> Print
+            </button>
+            <button id="dark-mode-btn" class="control-btn" aria-label="Toggle dark mode">Dark Mode</button>
+        </div>
+
+        <!-- Ingredients Section -->
+        <section class="recipe-section" aria-labelledby="ingredients-heading">
+            <h2 id="ingredients-heading">Ingredients</h2>
+            <ul class="ingredients-list">
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="1.75">1¾ cups (220g) all-purpose flour</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="0.75">¾ cup (65g) unsweetened cocoa powder</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="1.5">1½ cups (300g) granulated sugar</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="2">2 tsp baking powder</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="1">1 tsp baking soda</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="1">1 tsp salt</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="1">1 cup (240ml) buttermilk</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="0.5">½ cup (115g) melted butter</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="2">2 large eggs</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="1">1 tsp vanilla extract</span>
+                </li>
+                <li><input type="checkbox" class="ingredient-check"> 
+                    <span data-base-amount="1">1 cup (240ml) hot water</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Instructions Section -->
+        <section class="recipe-section" aria-labelledby="instructions-heading">
+            <h2 id="instructions-heading">Instructions</h2>
+            <button id="start-cooking-btn" class="big-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/857/857718.png" alt="" width="24"> Start Cooking
+            </button>
+            <ol class="instructions-list">
+                <li data-time="5"><strong>Preheat</strong> oven to 350°F (175°C). <strong>Grease</strong> and <strong>flour</strong> two 9-inch round cake pans.</li>
+                <li data-time="5"><strong>Sift</strong> together flour, cocoa powder, sugar, baking powder, baking soda, and salt.</li>
+                <li data-time="2"><strong>Add</strong> eggs, buttermilk, melted butter, and vanilla. <strong>Beat</strong> on medium speed for 2 minutes.</li>
+                <li data-time="2"><strong>Stir</strong> in hot water until combined (batter will be thin).</li>
+                <li data-time="35"><strong>Pour</strong> evenly into pans. <strong>Bake</strong> for 30-35 minutes until toothpick comes out clean.</li>
+                <li data-time="30"><strong>Cool</strong> in pans for 10 minutes, then transfer to wire racks to cool completely.</li>
+                <li data-time="15"><strong>Frost</strong> with chocolate buttercream or your favorite frosting.</li>
+            </ol>
+        </section>
+
+        <!-- Chef's Notes Section -->
+        <section class="recipe-section notes-section">
+            <h2>Chef's Notes</h2>
+            <div class="notes-grid">
+                <div class="note-card">
+                    <h3>Storage</h3>
+                    <p>Keeps for 3 days at room temp, 5 days refrigerated, or freeze up to 2 months.</p>
+                </div>
+                <div class="note-card">
+                    <h3>Substitutions</h3>
+                    <ul>
+                        <li>Buttermilk: 1 cup milk + 1 tbsp vinegar</li>
+                        <li>Eggs: ½ cup applesauce per egg</li>
+                        <li>Gluten-free: Use 1:1 GF flour blend</li>
+                    </ul>
+                </div>
+                <div class="note-card">
+                    <h3>Variations</h3>
+                    <ul>
+                        <li>Add 1 tsp instant coffee to intensify chocolate</li>
+                        <li>Mix in 1 cup chocolate chips</li>
+                        <li>Top with fresh berries</li>
+                    </ul>
+                </div>
+                <div class="note-card qr-card">
+                    <h3>Video Guide</h3>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.youtube.com/watch?v=1Zec5WxsBVA&size=100x100" alt="QR Code for video tutorial" 
+                         class="qr-code">
+                    <p>Scan for demo video</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Timer Modal -->
+    <div id="timer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Cooking Timer</h3>
+            <div class="timer-display" id="timer-display">00:00</div>
+            <button id="start-timer" class="control-btn">Start Timer</button>
+            <button id="reset-timer" class="control-btn">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
