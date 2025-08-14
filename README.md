@@ -3,7 +3,7 @@
 A visually stunning, feature-rich chocolate cake recipe card with interactive elements that make cooking fun and engaging. Perfect for beginner web developers looking to showcase creative UI/UX implementations.
 
 **🔗 Check it out here:** [Live Demo](https://aneeshsrinivas.github.io/recipe-card/)  
-We’d love to hear your thoughts — please share your valuable feedback after trying it out!
+I’d love to hear your thoughts — please share your valuable feedback after trying it out!
 
 ---
 
@@ -93,3 +93,4 @@ Flaticon for UI icons.
 Google for the Web Speech API.
 
 💡 Pro Tip: The QR code links to a special baking tutorial – scan it from your printed recipe!
+
